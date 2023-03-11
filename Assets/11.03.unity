@@ -269,7 +269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 170851}
   upForce: 300
-  speed: 1000
+  speed: 1500
   runSpeed: 3000
   isGrounded: 1
 --- !u!50 &170851
