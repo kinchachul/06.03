@@ -6,10 +6,11 @@ public class movement : MonoBehaviour
 {
     public Rigidbody2D rb;
 
-    public int upForce = 100;
+    public int upForce = 300 ;
     public float speed = 1500;
     public float runSpeed = 3000;
     public bool isGrounded = false;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +42,8 @@ public class movement : MonoBehaviour
     {
         isGrounded = true;
     }
+
+
     
 
 }
