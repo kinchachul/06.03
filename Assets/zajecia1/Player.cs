@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-	public int maxHealth = 90;
+	public int maxHealth = 3;
 	public int currentHealth;
 	
 
@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
     {
 		if (Input.GetKeyDown(KeyCode.Tab))
 		{
-			TakeDamage(30);
+			TakeDamage(1);
 		}
     }
 
