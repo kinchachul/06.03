@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -8,14 +9,19 @@ public class Player : MonoBehaviour
 	public int maxHealth = 3;
 	public int currentHealth;
 	
+     public int score;
+     
+	
 
 	public HealthBar healthBar;
 
     // Start is called before the first frame update
     void Start()
     {
+		
 		currentHealth = maxHealth;
 		healthBar.SetMaxHealth(maxHealth);
+		
     }
 
     // Update is called once per frame
@@ -25,6 +31,10 @@ public class Player : MonoBehaviour
 		{
 			TakeDamage(1);
 		}
+		if(currentHealth < 0)
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 
 	void TakeDamage(int damage)
@@ -32,5 +42,6 @@ public class Player : MonoBehaviour
 		currentHealth -= damage;
 
 		healthBar.SetHealth(currentHealth);
+		
 	}
 }

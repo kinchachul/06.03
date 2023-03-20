@@ -8,15 +8,12 @@ public class Health : MonoBehaviour
     public float currentHealth { get; private set; }
     private bool dead;
 
-    [Header("iFrames")]
-    [SerializeField] private float iFramesDuration;
-    [SerializeField] private int numberOfFlashes;
-    private SpriteRenderer spriteRend;
+    
 
     private void Awake()
     {
         currentHealth = startingHealth;
-        spriteRend = GetComponent<SpriteRenderer>();
+       
     }
     public void TakeDamage(float _damage)
     {

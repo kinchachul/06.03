@@ -9,6 +9,7 @@ public class HealthBar : MonoBehaviour
 public Slider slider;
 [SerializeField] private Health playerHealth;
 
+
 public void SetMaxHealth(int health)
 {
 	slider.maxValue = health;
@@ -19,5 +20,6 @@ public void SetHealth(int health)
 {
 	slider.value = health;
 }
+
 
 }
